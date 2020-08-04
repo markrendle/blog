@@ -26,10 +26,10 @@ disableLanguages        = []
   viewMorePostsLink     = "/blog/"
   readingTime           = true
   imageStretch          = ""
-  socialShare           = ["twitter", "facebook", "reddit", "linkedin", "pinterest", "email"]
+  socialShare           = ["twitter", "facebook", "reddit", "linkedin"]
 
   [params.meta]
-    description         = "A theme by HTML5 UP, ported by Julio Pescador. Slimmed and enhanced by Patrick Collins. Multilingual by StatnMap. Powered by Hugo."
+    description         = "Mark Rendle's .NET development blog. Powered by Hugo."
     author              = "HTML5UP and Hugo"
     favicon             = false
     svg                 = true
@@ -46,7 +46,7 @@ disableLanguages        = []
 
   [params.intro]
     header                = "rendle.dev"
-    paragraph             = "Mark Rendle's software development blog."
+    paragraph             = "Mark Rendle's .NET development blog."
     rssIntro              = true
     socialIntro           = true
     hideWhenSingleColumn  = false
@@ -70,11 +70,11 @@ disableLanguages        = []
 
   [params.staticman]
     enabled             = true
-    api                 = ""  # No Trailing Slash
-    gitProvider         = ""
-    username            = ""
-    repo                = ""
-    branch              = ""
+    api                 = "https://markrendle-bot.herokuapp.com"  # No Trailing Slash
+    gitProvider         = "github"
+    username            = "markrendle"
+    repo                = "blog"
+    branch              = "master"
 
     [params.staticman.recaptcha]
       siteKey           = ""
@@ -110,12 +110,12 @@ disableLanguages        = []
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 5
 
-  [[menu.main]]
-    name              = "Contact"
-    identifier        = "contact"
-    url               = "/contact/"
-    pre               = "<i class='far fa-envelope'></i>"
-    weight            = 6
+  # [[menu.main]]
+  #   name              = "Contact"
+  #   identifier        = "contact"
+  #   url               = "/contact/"
+  #   pre               = "<i class='far fa-envelope'></i>"
+  #   weight            = 6
 
 [Languages]
 
