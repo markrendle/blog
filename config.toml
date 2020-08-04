@@ -70,7 +70,7 @@ disableLanguages        = []
 
   [params.staticman]
     enabled             = true
-    api                 = "https://markrendle-bot.herokuapp.com"  # No Trailing Slash
+    api                 = "markrendle-bot.herokuapp.com"  # No Trailing Slash
     gitProvider         = "github"
     username            = "markrendle"
     repo                = "blog"
