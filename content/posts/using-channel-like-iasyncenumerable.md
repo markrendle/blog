@@ -1,8 +1,12 @@
 ---
 title: "Using Channel Like IAsyncEnumerable"
 date: 2020-07-29T12:13:25+01:00
-draft: false
 description: "How System.Threading.Channels can be used like IAsyncEnumerable in older .NET versions"
+draft: false
+tags:
+- dotnet
+categories:
+- Coding
 ---
 
 Ironically, as I am creating a Visual Studio extension that migrates .NET 4.x code to .NET Core 3.1, I find myself mainly coding with .NET 4.7.2 and C# 7.3. While it is technically possible to use a subset of C# 8 features outside of .NET Core 3.x, the VS SDK is a difficult beast and introducing it to new things often makes it unhappy. I've lost an afternoon tracking down a reference to `System.Collections.Immutable` that was upsetting it.
