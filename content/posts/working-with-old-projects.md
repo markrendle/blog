@@ -5,6 +5,7 @@ draft: false
 tags:
 - dotnet
 - roslyn
+- open-source
 categories:
 - Coding
 ---

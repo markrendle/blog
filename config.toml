@@ -110,6 +110,13 @@ disableLanguages        = []
     pre               = "<i class='fas fa-sitemap'></i>"
     weight            = 5
 
+  [[menu.main]]
+    name              = "Visual ReCode"
+    identifier        = "visualrecode"
+    url               = "https://visualrecode.com"
+    pre               = "<i class='fas fa-code'></i>"
+    weight            = 5
+
   # [[menu.main]]
   #   name              = "Contact"
   #   identifier        = "contact"
