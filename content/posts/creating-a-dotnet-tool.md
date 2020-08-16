@@ -217,6 +217,7 @@ private async Task<HashSet<string>> ListFileAsync()
     var result = await Cli.Wrap("git")
         .WithArguments("ls-files")
         .WithWorkingDirectory(_workingDirectory)
+        .WithValidation(CommandResultValidation.None)
         .WithStandardOutputPipe(PipeTarget.ToDelegate(line =>
         {
             line = _fileSystem.Path.Normalize(line);
@@ -240,8 +241,12 @@ That `WithStandardOutputPipe` call works with `PipeTarget` objects: there are
 implementations built-in for delegates, streams and `StringBuilder` and you
 can implement your own, too.
 
-If `git` isn't installed, or the working directory is not a `git` repo, then the
-exit code will be non-zero and we can just forget it.
+Note the `.WithValidation(CommandResultValidation.None)` line: the default behaviour
+for CliWrap is to throw an exception if the command returns a non-zero exit code, and
+we're expecting that might happen so we want to avoid an exception. With
+`CommandValidation.None`, if `git` isn't installed, or the working directory is not a
+`git` repo, then `result.ExitCode` will be non-zero and we can just return an
+empty `HashSet<string>`.
 
 ## Making it a tool
 
